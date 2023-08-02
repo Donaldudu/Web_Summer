@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const {signup_student, signup_instructor} = require('../Controller/AdminController');
+const signupStudent = require('../Controller/SignupController').default;
 
-router.post('/signupStudent', signup_student);
-router.post('signupInstructor', signup_instructor);
+// POST route to handle student signup
+router.post('/signup', signupStudent);
 
-module.exports= router;
+module.exports = router;
